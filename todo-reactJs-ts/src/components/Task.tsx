@@ -1,6 +1,6 @@
 import styles from './Task.module.css';
 import { Trash, Check } from 'phosphor-react'
-import { HTMLAttributes } from 'react'
+import { HTMLInputA } from 'react'
 
 interface TaskList extends HTMLAttributes<HTMLElement> {
     id: string;
