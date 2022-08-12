@@ -2,7 +2,16 @@ import { NewTask } from './NewTask';
 import { Task } from './Task';
 import styles from './ToDoList.module.css';
 
-
+let listYourTask = [
+    {
+        id: "1",
+        description: '..'
+    },
+    {
+        id: '2',
+        description: ','
+    }
+]
 
 export function ToDoList() {
     return (
@@ -19,10 +28,9 @@ export function ToDoList() {
                         <span>2 de 5</span>
                     </div>
                 </header>
-                <Task id="1" />
-                <Task id="2" />
-                <Task id="3" />
-                <Task id="4" />
+                {listYourTask.map(task => {
+                    return <Task id={task.id} description={task.description} />
+                })}
             </section>
         </article>
     )

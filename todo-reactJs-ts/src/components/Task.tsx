@@ -1,14 +1,20 @@
 import styles from './Task.module.css';
 import { Trash, Check } from 'phosphor-react'
+import { HTMLAttributes } from 'react'
 
-export function Task(props) {
+interface TaskList extends HTMLAttributes<HTMLElement> {
+    id: string;
+    description: string;
+}
+
+export function Task({ id, description }: TaskList) {
     return (
         <section className={styles.task}>
-            <input type="checkbox" id={props.id} />
-            <label htmlFor={props.id}>{/* aqui tem que achar um jeito de vincular o id com algo */}
+            <input type="checkbox" id={id} />
+            <label htmlFor={id}>{/* aqui tem que achar um jeito de vincular o id com algo */}
                 <Check />
             </label>
-            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <p>{description}</p>
             <button>
                 <Trash className={styles.trashTask} />
             </button>
