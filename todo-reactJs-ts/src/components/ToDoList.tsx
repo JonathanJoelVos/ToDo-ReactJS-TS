@@ -5,11 +5,11 @@ import styles from './ToDoList.module.css';
 let listYourTask = [
     {
         id: "1",
-        description: '..'
+        description: 'Task one'
     },
     {
         id: '2',
-        description: ','
+        description: 'Task dsa casoa csjuancias dsamos cai'
     }
 ]
 
