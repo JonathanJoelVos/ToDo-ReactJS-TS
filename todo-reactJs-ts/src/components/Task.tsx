@@ -1,6 +1,6 @@
 import styles from './Task.module.css';
 import { Trash, Check } from 'phosphor-react'
-import { HTMLInputA } from 'react'
+import { HTMLAttributes } from 'react'
 
 interface TaskList extends HTMLAttributes<HTMLElement> {
     id: string;
@@ -14,7 +14,7 @@ export function Task({ id, description }: TaskList) {
             <label htmlFor={id}>{/* aqui tem que achar um jeito de vincular o id com algo */}
                 <Check />
             </label>
-            <p>{description}</p>
+            <p className={styles.taskP || styles.taskPE}>{description}</p>
             <button>
                 <Trash className={styles.trashTask} />
             </button>

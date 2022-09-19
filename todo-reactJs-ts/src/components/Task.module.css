@@ -27,6 +27,12 @@
     background-color: #1e709f2c;
 }
 
+.task input[type="checkbox"]:checked~p {
+    color: var(--gray-300);
+    font-style: italic;
+    text-decoration: line-through;
+}
+
 .task input[type="checkbox"]:checked+label {
     background-color: var(--purple-500);
     border: 3px solid var(--purple-500);
